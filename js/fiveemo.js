@@ -57,10 +57,9 @@ class FiveEmo {
         }
 
         if (this.mode === "popup") {
-            element.innerHTML = `<a href='${url}?m=popup' target='fiveemo_popup' style='cursor: pointer; padding: 2px;' (click)='window.open('${url}?m=popup', "fiveemo_popup", "menubar=no, toolbar=no, location=no, scrollbars=no, width=800, height=600, status=no, resizable=yes, top=0, left=0, dependent=yes, alwaysRaised=yes"' ><img src='https://www.5emotions.de/assets/icons/5emotions-button-100x25.png' ></a>`;
+            element.innerHTML = `<a href='${url}?m=popup' target='fiveemo_popup' style='cursor: pointer; padding: 2px;' (click)='window.open('${url}?m=popup', "fiveemo_popup", "menubar=no, toolbar=no, location=no, scrollbars=no, width=800, height=600, status=no, resizable=yes, top=0, left=0, dependent=yes, alwaysRaised=yes"' ><img src='${origin}assets/icons/5emotions-button-100x25.png' ></a>`;
         } else if ((this.mode === "iframe") || (this.mode === "kiosk")) {
-            element.innerHTML = `<iframe id='${framename}' name='${framename}' width='${this.width}' height='${this.height}' frameborder='0' allow='accelerometer; gyroscope' allowfullscreen allowTransparency="true"></iframe><form id="${formname}" action="${url}" target='${framename}' method="post"><input type="hidden" id="fiveemo_hidden_input" value="fiveemo" /></form>`;
-            document.getElementById(formname).submit();
+            element.innerHTML = `<iframe id='${framename}' name='${framename}' src="${url}" width='${this.width}' height='${this.height}' onload='var win5emo = window.frames.${framename}; var dat = {parent: window.location.href}; win5emo.postMessage(dat, "${origin}");' frameborder='0' allow='accelerometer; gyroscope' allowfullscreen allowTransparency="true"></iframe>`;
         }
     }
 }
