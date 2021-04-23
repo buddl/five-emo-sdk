@@ -1,0 +1,32 @@
+{
+  "name": "five-emo-sdk",
+  "version": "1.0.0",
+  "description": "SDK to embed 5 Emotions into your web app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test-five-emo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buddl/five-emo-sdk.git"
+  },
+  "keywords": [
+    "survey",
+    "questionnaire",
+    "opinion",
+    "poll",
+    "sentiment",
+    "instant",
+    "customer feedback",
+    "customer satisfaction",
+    "NPS",
+    "point of experience",
+    "anonymous feedback"
+  ],
+  "author": "5 Emotions",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buddl/five-emo-sdk/issues"
+  },
+  "homepage": "https://github.com/buddl/five-emo-sdk#readme"
+}
