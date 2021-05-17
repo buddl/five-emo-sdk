@@ -1,5 +1,7 @@
 # five-emo-sdk
 The SDK to use 5 Emotions
+For more information visit: https://www.5emotions.de/
+
 
 # Embed 5 Emotions into your website
 
